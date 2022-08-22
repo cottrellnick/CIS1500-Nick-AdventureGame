@@ -12,7 +12,7 @@ public class Dice {
         roll();
     }
 
-    public static void roll() {
+    public void roll() {
         int dieOne = (int) (Math.random() * 6) + 1;
         int dieTwo = (int) (Math.random() * 6) + 1;
         int dieThree = (int) (Math.random() * 6) + 1;
@@ -32,18 +32,10 @@ public class Dice {
 
 
     public int getTotalOne() {
-        return totalOne;
-    }
-
-    public void setTotalOne(int totalOne) {
-        this.totalOne = dieOne + dieTwo + dieThree;
+        return dieOne + dieTwo + dieThree;
     }
 
     public int getTotalTwo() {
-        return totalTwo;
-    }
-
-    public void setTotalTwo(int totalTwo) {
-        this.totalTwo = dieOne + dieTwo;
+        return dieOne + dieTwo;
     }
 }
