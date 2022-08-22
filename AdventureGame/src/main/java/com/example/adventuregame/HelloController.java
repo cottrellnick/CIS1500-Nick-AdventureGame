@@ -8,6 +8,9 @@ import javafx.scene.control.TextArea;
 
 public class HelloController {
 
+    Character character;
+    Dice dice;
+
     @FXML
     private TextArea textArea;
     @FXML
@@ -85,14 +88,14 @@ public class HelloController {
 
     @FXML
     public void getCharacterStatsButtonClicked(ActionEvent actionEvent) {
-        Dice.rollDie();
-        Character.setStrength(Dice.getTotalOne);
         Dice.roll();
-        Character.setIntelligence(Dice.getTotalOne);
+        Character.setStrength(Dice.totalOne);
         Dice.roll();
-        Character.setDexterity(Dice.getTotalOne);
+        Character.setIntelligence(Dice.totalOne);
+        Dice.roll();
+        Character.setDexterity(Dice.totalOne);
     }
-
+strengthStat.setText("Strength: " + totalOne);
 
     @FXML
     public void getMonsterStatsButtonClicked(ActionEvent actionEvent) {

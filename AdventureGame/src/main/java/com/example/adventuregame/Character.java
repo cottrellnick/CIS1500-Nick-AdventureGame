@@ -23,7 +23,7 @@ public class Character {
         return strength;
     }
 
-    public void setStrength(int strength) {
+    public static void setStrength(int strength) {
         this.strength = strength;
     }
 
@@ -31,7 +31,7 @@ public class Character {
         return dexterity;
     }
 
-    public void setDexterity(int dexterity) {
+    public static void setDexterity(int dexterity) {
         this.dexterity = dexterity;
     }
 
@@ -39,7 +39,7 @@ public class Character {
         return intelligence;
     }
 
-    public void setIntelligence(int intelligence) {
+    public static void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
 
