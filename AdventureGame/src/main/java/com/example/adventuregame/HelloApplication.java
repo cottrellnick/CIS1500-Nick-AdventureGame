@@ -16,10 +16,6 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    Dice dice;
-    Character character;
-
-    private Room[][] rooms = new Room[10][10];
 
     public static void main(String[] args) {
         launch();

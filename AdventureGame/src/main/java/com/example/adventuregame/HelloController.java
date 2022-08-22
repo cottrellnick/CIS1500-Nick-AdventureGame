@@ -90,11 +90,25 @@ public class HelloController {
     public void getCharacterStatsButtonClicked(ActionEvent actionEvent) {
         Character character = new Character();
 
-        Dice.roll();
+        Dice diceStrength;
+        diceStrength = new Dice();
+            Dice.roll();
+            System.out.println("The dice come up " + dice.getDieOne()
+                    + ", " + dice.getDieTwo() + ", and " + dice.getDieThree());
         character.setStrength(dice.totalOne);
+
+        Dice diceIntelligence;
+        diceIntelligence = new Dice();
         Dice.roll();
+        System.out.println("The dice come up " + dice.getDieOne()
+                + ", " + dice.getDieTwo() + ", and " + dice.getDieThree());
         character.setIntelligence(dice.totalOne);
+
+        Dice diceDexterity;
+        diceDexterity = new Dice();
         Dice.roll();
+        System.out.println("The dice come up " + dice.getDieOne()
+                + ", " + dice.getDieTwo() + ", and " + dice.getDieThree());
         character.setDexterity(dice.totalOne);
         character.setHitPoints(20);
 
@@ -108,13 +122,32 @@ public class HelloController {
 
         Monster monster = new Monster();
 
+        Dice diceMonsterStrength;
+        diceMonsterStrength = new Dice();
         Dice.roll();
+        System.out.println("The dice come up " + dice.getDieOne()
+                + " and " + dice.getDieTwo());
         monster.setStrength(dice.totalTwo);
+        Dice diceMonsterIntelligence;
+
+        diceMonsterIntelligence = new Dice();
         Dice.roll();
+        System.out.println("The dice come up " + dice.getDieOne()
+                + " and " + dice.getDieTwo());
         monster.setIntelligence(dice.totalTwo);
+
+        Dice diceMonsterDexterity;
+        diceMonsterDexterity = new Dice();
         Dice.roll();
+        System.out.println("The dice come up " + dice.getDieOne()
+                + " and " + dice.getDieTwo());
         monster.setDexterity(dice.totalTwo);
+
+        Dice diceMonsterHitPoints;
+        diceMonsterHitPoints = new Dice();
         Dice.roll();
+        System.out.println("The dice come up " + dice.getDieOne()
+                + " and " + dice.getDieTwo());
         monster.setHitPoints(dice.totalTwo);
 
 
