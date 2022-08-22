@@ -88,8 +88,7 @@ public class HelloController {
 
     @FXML
     public void getCharacterStatsButtonClicked(ActionEvent actionEvent) {
-
-        Dice strengthRoll = new Dice.roll(dieOne, dieTwo, dieThree);
+        Character character = new Character();
 
         Dice.roll();
         character.setStrength(dice.totalOne);
@@ -99,18 +98,29 @@ public class HelloController {
         character.setDexterity(dice.totalOne);
         character.setHitPoints(20);
 
-        strengthStat.setText("Strength: " + totalOne);
+        strengthStat.setText("Strength: " + character.getStrength());
+        intelligenceStat.setText("Intelligence: " + character.getIntelligence());
+        dexterityStat.setText("Dexterity: " + character.getDexterity());
     }
 
     @FXML
     public void getMonsterStatsButtonClicked(ActionEvent actionEvent) {
+
+        Monster monster = new Monster();
+
         Dice.roll();
-        Monster.setStrength(dice.totalTwo);
+        monster.setStrength(dice.totalTwo);
         Dice.roll();
-        Monster.setIntelligence(dice.totalTwo);
+        monster.setIntelligence(dice.totalTwo);
         Dice.roll();
-        Monster.setDexterity(dice.totalTwo);
+        monster.setDexterity(dice.totalTwo);
         Dice.roll();
-        Monster.setHitPoints(dice.totalTwo);
+        monster.setHitPoints(dice.totalTwo);
+
+
+        monsterStrengthStat.setText("Strength: " + monster.getStrength());
+        monsterIntelligenceStat.setText("Intelligence: " + monster.getIntelligence());
+        monsterDexterityStat.setText("Dexterity: " + monster.getDexterity());
+        monsterHitPointsStat.setText("Hit Points: " + monster.getHitPoints());
     }
 }

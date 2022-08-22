@@ -11,7 +11,6 @@ public class Dice {
     public Dice() {
         roll();
     }
-
     public static void roll() {
         int dieOne = (int) (Math.random() * 6) + 1;
         int dieTwo = (int) (Math.random() * 6) + 1;
