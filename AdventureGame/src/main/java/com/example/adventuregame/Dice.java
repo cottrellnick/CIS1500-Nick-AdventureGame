@@ -31,7 +31,7 @@ public class Dice {
         return dieTwo + dieTwo + dieThree;
     }
 
-    public int getTotal2() {
+    public int getTotalTwo() {
         return dieOne + dieTwo;
     }
 }

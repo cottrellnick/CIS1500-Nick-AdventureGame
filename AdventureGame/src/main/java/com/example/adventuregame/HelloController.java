@@ -85,9 +85,13 @@ public class HelloController {
 
     @FXML
     public void getCharacterStatsButtonClicked(ActionEvent actionEvent) {
-        Dice characterDiceRoll;
+        Dice.rollDie();
+        Character.setStrength(Dice.getTotalOne);
+        Dice.roll();
+        Character.setIntelligence(Dice.getTotalOne);
+        Dice.roll();
+        Character.setDexterity(Dice.getTotalOne);
     }
-
 
 
     @FXML
