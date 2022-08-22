@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
+import java.util.Random;
+
 public class HelloController {
 
     String [] rooms = new String[100];
@@ -69,6 +71,8 @@ public class HelloController {
             textArea.appendText("You have entered the room to the South\n");
         } else if (actionEvent.getSource() == westButton) {
             textArea.appendText("You have entered the room to the West\n");
+        } else if (actionEvent.getSource() == searchButton) {
+            textArea.appendText("You search the room and find Gold!\n");
         }
 
             northButton.setDisable(false);
@@ -93,7 +97,7 @@ public class HelloController {
 
         }
 
-    @FXML
+    @Deprecated
     public void getCharacterStatsButtonClicked(ActionEvent actionEvent) {
         Character character = new Character();
 
@@ -124,7 +128,7 @@ public class HelloController {
         dexterityStat.setText("Dexterity: " + character.getDexterity());
     }
 
-    @FXML
+    @Deprecated
     public void getMonsterStatsButtonClicked(ActionEvent actionEvent) {
 
         Monster monster = new Monster();
@@ -162,5 +166,12 @@ public class HelloController {
         monsterIntelligenceStat.setText("Intelligence: " + monster.getIntelligence());
         monsterDexterityStat.setText("Dexterity: " + monster.getDexterity());
         monsterHitPointsStat.setText("Hit Points: " + monster.getHitPoints());
+    }
+
+    @Deprecated
+    public void buttonSearchClicked(ActionEvent actionEvent) {
+    }
+
+    public void actionButtonClicked(ActionEvent actionEvent) {
     }
 }

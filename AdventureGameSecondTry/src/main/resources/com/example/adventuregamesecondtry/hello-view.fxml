@@ -10,45 +10,37 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adventuregame.HelloController">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adventuregamesecondtry.HelloController">
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Player Stats" />
-            <Label fx:id="hitPointsStat" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="113.0" />
-            <Label fx:id="strengthStat" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="142.0" />
-            <Label fx:id="dexterityStat" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="133.0" />
-            <Label fx:id="intelligenceStat" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="141.0" />
-            <Label fx:id="goldStat" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="156.0" />
+            <Label alignment="TOP_CENTER" text="Character Stats" />
          </children>
       </VBox>
    </left>
    <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Monster Stats" />
-            <Label fx:id="monsterStrengthStat" alignment="CENTER" contentDisplay="CENTER" />
-            <Label fx:id="monsterDexterityStat" alignment="CENTER" contentDisplay="CENTER" />
-            <Label fx:id="monsterIntelligenceStat" alignment="CENTER" contentDisplay="CENTER" />
-            <Label fx:id="monsterHitPointsStat" alignment="CENTER" contentDisplay="CENTER" />
          </children>
       </VBox>
    </right>
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="getCharacterStatsButton" mnemonicParsing="false" onAction="#buttonClicked" text="Get Character Stats" />
+            <Button fx:id="getCharacterStatsButton" mnemonicParsing="false" onAction="#characterStatsButtonClicked" text="Get Chartacter Stats" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#buttonClicked" text="Search" />
             <Button fx:id="fightButton" mnemonicParsing="false" onAction="#buttonClicked" text="Fight" />
             <Button fx:id="runButton" mnemonicParsing="false" onAction="#buttonClicked" text="Run" />
             <Button fx:id="sleepButton" mnemonicParsing="false" onAction="#buttonClicked" text="Sleep" />
-            <Button fx:id="getMonsterStatusButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#buttonClicked" text="Get Monster Stats" />
+            <Button fx:id="getMonsterStatsButton" mnemonicParsing="false" onAction="#monsterStatsButtonClicked" text="Get Monster Stats" />
          </children>
       </HBox>
    </top>
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#buttonClicked" text="Search" />
             <GridPane alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -63,14 +55,14 @@
                <children>
                   <Button fx:id="northButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonClicked" text="North" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button fx:id="westButton" mnemonicParsing="false" onAction="#buttonClicked" text="West" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="eastButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonClicked" text="East" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <Button fx:id="southButton" mnemonicParsing="false" onAction="#buttonClicked" text="South" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="eastButton" mnemonicParsing="false" onAction="#buttonClicked" text="East" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
          </children>
       </HBox>
    </bottom>
    <center>
-      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
