@@ -85,9 +85,13 @@ public class HelloController {
 
     @FXML
     public void getCharacterStatsButtonClicked(ActionEvent actionEvent) {
+        Dice characterDiceRoll;
     }
+
+
 
     @FXML
     public void getMonsterStatsButtonClicked(ActionEvent actionEvent) {
+        Dice monsterDiceRoll;
     }
 }
