@@ -8,6 +8,13 @@ import javafx.scene.control.TextArea;
 
 public class HelloController {
 
+    String [] rooms = new String[100];
+
+    public String[] getRooms() {
+        return rooms;
+
+    }
+
     Character character;
     Dice dice;
 

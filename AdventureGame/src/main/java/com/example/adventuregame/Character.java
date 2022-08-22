@@ -1,11 +1,11 @@
 package com.example.adventuregame;
 
 public class Character {
-    private int strength;
-    private int dexterity;
-    private int intelligence;
-    private int hitPoints;
-    private int totalGold;
+    int strength;
+    int dexterity;
+    int intelligence;
+    int hitPoints;
+    int totalGold;
 
     public Character (int strength, int dexterity, int intelligence, int hitPoints, int totalGold) {
 
@@ -44,10 +44,11 @@ public class Character {
     }
 
     public int getHitPoints()
-    { return hitPoints; }
+    { return hitPoints;}
 
     public void setHitPoints(int hitPoints) {
         this.hitPoints = hitPoints;
+        hitPoints = 20;
     }
 
     public int getTotalGold() {
