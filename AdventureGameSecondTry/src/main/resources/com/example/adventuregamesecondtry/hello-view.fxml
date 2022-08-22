@@ -15,14 +15,23 @@
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="TOP_CENTER" text="Character Stats" />
+            <Label fx:id="characterStatsLabel" alignment="TOP_CENTER" text="Character Stats" />
+            <Label fx:id="hitPointsStat" />
+            <Label fx:id="strengthStat" />
+            <Label fx:id="intelligenceStat" />
+            <Label fx:id="dexterityStat" />
+            <Label fx:id="goldTotal" />
          </children>
       </VBox>
    </left>
    <right>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Monster Stats" />
+            <Label fx:id="monsterStatsLabel" text="Monster Stats" />
+            <Label fx:id="monsterHitPoints" />
+            <Label fx:id="monsterStrength" />
+            <Label fx:id="monsterIntelligence" />
+            <Label fx:id="monsterDexterity" />
          </children>
       </VBox>
    </right>
@@ -63,6 +72,6 @@
       </HBox>
    </bottom>
    <center>
-      <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
